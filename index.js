@@ -53,10 +53,7 @@ function init() {
     // send the data to generateMarkdown to format it
     let markdown = generateMarkdown(data);
     // variable for license functions
-    let license = `${data.license}`;
-    // console.log(license);
-    // bring this back after I actually write the function duh
-    // renderLicenseSection(license);
+
     writeToFile(markdown);
   }
   );
