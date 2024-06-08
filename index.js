@@ -1,43 +1,57 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {type: "input",
-    message: "what is your github username?",
-    name: "title"},
-    {type: "input",
-    message: "What is your email address?",
-    name: "titleDisc"},
+    // {type: "input",
+    // message: "what is your github username?",
+    // name: "username"},
+    // {type: "input",
+    // message: "What is your email address?",
+    // name: "email"},
     {type: "input",
     message: "What is your project's name?",
-    name: "titleDisc0"},
-    {type: "input",
-    message: "Write a short description of your project:",
-    name: "titleDisc1"},
-    {type: "list",
-    message: "What type of license should you project have?",
-    name: "titleDisc2",
-    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "none"]},
-    {type: "input",
-    message: "What command should I run to run the dependencies?",
-    name: "titleDisc3"},
-    {type: "input",
-    message: "What does the user need to know about using the repo?",
-    name: "titleDisc4"},
-    {type: "input",
-    message: "What does the user need to know about contributing the repo?",
-    name: "titleDisc5"}
+    name: "title"},
+    // {type: "input",
+    // message: "Write a short description of your project:",
+    // name: "description"},
+    // {type: "list",
+    // message: "What type of license should you project have?",
+    // name: "license",
+    // choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "none"]},
+    // {type: "input",
+    // message: "What command should I run to run the dependencies?",
+    // name: "dependencies"},
+    // {type: "input",
+    // message: "What does the user need to know about using the repo?",
+    // name: "using"},
+    // {type: "input",
+    // message: "What does the user need to know about contributing the repo?",
+    // name: "contributing"}
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// This takes in data and uses it to create a readme file
+const writeToFile = (data) => {
+  fs.writeFile('generated-readme.md', data, (err) => {
+    err ? console.error(err)
+    : console.log('File created!')
+  })
+}
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
   .prompt(questions)
-  .then((response) => console.log(response));
+  .then((data) => {
+    // send the data to generateMarkdown to format it
+    let markdown = generateMarkdown(data)
+    writeToFile(markdown)
+  }
+  );
 }
 
 // Function call to initialize app
