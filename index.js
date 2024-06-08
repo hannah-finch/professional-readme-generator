@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [
     {type: "input",
-    message: "what is your github username?",
+    message: "what is your GitHub username?",
     name: "username"},
     {type: "input",
     message: "What is your email address?",
@@ -23,8 +23,11 @@ const questions = [
     name: "license",
     choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "none"]},
     {type: "input",
-    message: "What command should I use to run the dependencies?",
-    name: "command"},
+    message: "What command should be run to install dependencies?",
+    name: "dependencies"},
+    {type: "input",
+      message: "What command should be run to run tests?",
+      name: "tests"},
     {type: "input",
     message: "What does the user need to know about using the repo?",
     name: "usage"},
@@ -48,8 +51,13 @@ function init() {
   .prompt(questions)
   .then((data) => {
     // send the data to generateMarkdown to format it
-    let markdown = generateMarkdown(data)
-    writeToFile(markdown)
+    let markdown = generateMarkdown(data);
+    // variable for license functions
+    let license = `${data.license}`;
+    // console.log(license);
+    // bring this back after I actually write the function duh
+    // renderLicenseSection(license);
+    writeToFile(markdown);
   }
   );
 }
