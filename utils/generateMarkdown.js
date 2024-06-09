@@ -18,13 +18,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "MIT") {
-    return "License: [MIT](https://opensource.org/license/mit)";
+    return "[MIT](https://opensource.org/license/mit)";
   } else if (license === "APACHE 2.0") {
-    return "License: [APACHE 2.0](https://opensource.org/license/apache-2-0)";
+    return "[APACHE 2.0](https://opensource.org/license/apache-2-0)";
   } else if (license === "GPL 3.0") {
-    return "License: [GPL 3.0](https://opensource.org/license/gpl-3-0)";
+    return "[GPL 3.0](https://opensource.org/license/gpl-3-0)";
   } else if (license === "BSD 3") {
-    return "License: [BSD 3](https://opensource.org/license/bsd-3-clause)";
+    return "[BSD 3](https://opensource.org/license/bsd-3-clause)";
   } else if (license === "none") {
     return "";
   }
@@ -34,19 +34,26 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseLink = renderLicenseLink(license);
-  let licenseBadge = renderLicenseBadge(license);
+  // let licenseBadge = renderLicenseBadge(license);
+  // console.log(licenseLink);
 
-  console.log(licenseLink);
-  console.log(licenseBadge);
+  return `This application is covered under the ${licenseLink} license.`
+
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
   let license = `${data.license}`;
+  let licenseBadge = renderLicenseBadge(license);
+  let licenseSection = renderLicenseSection(license)
   // console.log(license);
-  renderLicenseSection(license);
+  // renderLicenseSection(license);
 
   return `# ${data.title}
+
+  ${licenseBadge}
+
   ## Description
 
   ${data.description}
@@ -55,8 +62,10 @@ function generateMarkdown(data) {
 
   * [Installation](#Installation)
   * [Usage](#Usage)
+  * [License](#License)
   * [Contributing](#Contributing)
   * [Tests](#Tests)
+  * [Questions](#Questions)
   
   ## Installation
 
@@ -72,6 +81,8 @@ function generateMarkdown(data) {
   
   ## License
   
+  ${licenseSection}
+
   ## Contributing
   
   ${data.contributing}
