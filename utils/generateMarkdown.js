@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === "MIT") {
@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "MIT") {
@@ -30,26 +30,18 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseLink = renderLicenseLink(license);
-  // let licenseBadge = renderLicenseBadge(license);
-  // console.log(licenseLink);
-
   return `This application is covered under the ${licenseLink} license.`
-
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
-
   let license = `${data.license}`;
   let licenseBadge = renderLicenseBadge(license);
   let licenseSection = renderLicenseSection(license)
-  // console.log(license);
-  // renderLicenseSection(license);
-
   return `# ${data.title}
 
   ${licenseBadge}
@@ -101,14 +93,5 @@ function generateMarkdown(data) {
   To view my other repos, see my [GitHub profile](https://github.com/${data.username})
 `;
 }
-
-// Here is the acceptance criteria in a readable way
-// - professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// - project title is displayed as the title of the README
-// - choose a license for my application from a list of options
-// - badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// - GitHub username added to the section of the README entitled Questions, with a link to my GitHub profile
-// - email address added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-// -links in the Table of Contents corresponding section of the README
 
 module.exports = generateMarkdown;
