@@ -1,10 +1,10 @@
-# asdf
+# Example README
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
-  asdf
+  Here is an example README, created by this README generator
 
   ## Table of Contents
 
@@ -20,12 +20,12 @@
   To install the necessary dependencies, run the following command:
 
   ~~~
-  asdf
+  command
   ~~~
 
   ## Usage
 
-  asdf
+  Answer prompts to generate a README file. The file will be called generated-README.md
   
   ## License
   
@@ -33,17 +33,17 @@
 
   ## Contributing
   
-  asdf
+  Information about contributing
   
   ## Tests
   
   To run tests, run the following command:
   
   ~~~
-  asdf
+  testing command
   ~~~
   
   ## Questions
   
-  For questions about this repo, open an issue or email me directly at <asdf><br>
-  To view my other repos, see my [GitHub profile](https://github.com/asdf)
+  For questions about this repo, open an issue or email me directly at <hannahschwen@gmail.com><br>
+  To view my other repos, see my [GitHub profile](https://github.com/hannahschwen)
