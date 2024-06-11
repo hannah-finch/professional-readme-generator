@@ -1,5 +1,5 @@
 # Example README
-
+ 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
@@ -20,12 +20,12 @@
   To install the necessary dependencies, run the following command:
 
   ~~~
-  command to install dependencies
+  <command>
   ~~~
 
   ## Usage
 
-  Usage information
+  Usage info
   
   ## License
     
@@ -33,14 +33,14 @@
 
   ## Contributing
   
-  Contribution information
+  Contributing info
   
   ## Tests
   
   To run tests, run the following command:
   
   ~~~
-  command to run tests
+  <command>
   ~~~
   
   ## Questions
