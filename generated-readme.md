@@ -4,7 +4,7 @@
 
   ## Description
 
-  Here is an example README, created by this README generator
+  Example description
 
   ## Table of Contents
 
@@ -20,27 +20,27 @@
   To install the necessary dependencies, run the following command:
 
   ~~~
-  command
+  command to install dependencies
   ~~~
 
   ## Usage
 
-  Answer prompts to generate a README file. The file will be called generated-README.md
+  Usage information
   
   ## License
-  
+    
   This application is covered under the [MIT](https://opensource.org/license/mit) license.
 
   ## Contributing
   
-  Information about contributing
+  Contribution information
   
   ## Tests
   
   To run tests, run the following command:
   
   ~~~
-  testing command
+  command to run tests
   ~~~
   
   ## Questions
