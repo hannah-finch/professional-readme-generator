@@ -10,7 +10,7 @@ A professional README generator, that accepts input from the terminal in order t
 
 The following video shows the functionality of the README generator:
 
-<video src="./assets/readme-generator-video.mp4" width="100%" controls></video>
+![README generator gif](./assets/readme-generator-gif.gif)
 
 To run the generator, a user should open the application folder in the terminal and run the following command:
 
