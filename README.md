@@ -12,6 +12,8 @@ The following video shows the functionality of the README generator:
 
 [README generator video](https://drive.google.com/file/d/1GCQlOdjFZ3gG6B6bU5QMRFFP-sn5Kovy/view?usp=drive_link)
 
+See the generated-readme.md file in the repo for an example of what can be generated.
+
 To run the generator, a user should open the application folder in the terminal and run the following command:
 
 ~~~
